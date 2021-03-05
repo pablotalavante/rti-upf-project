@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class control : MonoBehaviour {
+public class Control : MonoBehaviour {
 	public float speed;
 	public float speedR;
 	float walkSpeed;
