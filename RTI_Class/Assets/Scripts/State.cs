@@ -12,7 +12,7 @@ public class State : MonoBehaviour
     public string gender; // m, f, na
 
     // Experiment info
-    public int group; // 0 or 1 based on what kind of trial this is
+    public int group; // 0, 1, 2 based on what kind of trial this is
 
     // Experiment state
     // 0 : searching

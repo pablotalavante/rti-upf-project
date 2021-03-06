@@ -16,7 +16,6 @@ public class Trigger : MonoBehaviour
     {
         landmarks = GameObject.FindGameObjectsWithTag("Landmark");
         pathways = GameObject.FindGameObjectsWithTag("Pathway");
-        groupId = state.group; //TODO: get from UI
     }
 
     void Update()
@@ -25,20 +24,18 @@ public class Trigger : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other){
-    	if(other.tag=="Player"){
-            // Vector3 deltaY = new Vector3(0, -100, 0);
-            Debug.Log(groupId);
+        groupId = state.group; 
 
+    	if(other.tag=="Player"){
             if (groupId == 0) { // allocentric only
                 foreach (GameObject obj in pathways)
                 {
                     Destroy(obj); // destroy walls
                 }
-                participant.transform.Rotate(0.0f, Random.Range(45.0f, 225.0f), 0.0f, Space.Self); // randomly disoriented
+                participant.transform.Rotate(0.0f, Random.Range(90.0f, 270.0f), 0.0f, Space.Self); // randomly disoriented
             }  else if (groupId == 1) { // egocentric only
                 foreach (GameObject obj in landmarks)
                 {
-                    //obj.transform.Translate(deltaY); 
                     Destroy(obj); // destroy landmarks
                 }
             }   
@@ -46,7 +43,8 @@ public class Trigger : MonoBehaviour
 
             state.Progress(); // progress state to 'find starting' phase
     	}
+
     	Debug.Log(other.tag);
-    	Debug.Log("okey");
+    	Debug.Log("Okey");
     }
 }

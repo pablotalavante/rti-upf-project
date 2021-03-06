@@ -9,6 +9,7 @@ public class Control : MonoBehaviour {
 
 	void Awake()
 	{
+		
 	}
 
 	void FixedUpdate () {
