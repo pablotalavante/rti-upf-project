@@ -7,14 +7,11 @@ public class Control : MonoBehaviour {
 	float walkSpeed;
 	float runSpeed;
 
-	// Use this for initialization
 	void Awake()
 	{
 
 	}
 
-	
-	// Update is called once per frame
 	void FixedUpdate () {
 	
 		if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
@@ -31,6 +28,5 @@ public class Control : MonoBehaviour {
         {
             transform.Rotate(Vector3.down* -1  * speedR);
 		}
-
 	}
 }
