@@ -42,7 +42,7 @@ public class Logger : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    public void StartLogging()
     {
 		position_writer = new Writer(ComposeFileName(position_file_pre));
 		heading_writer = new Writer(ComposeFileName(heading_file_pre));
@@ -58,7 +58,7 @@ public class Logger : MonoBehaviour
 
 	void LogPlayerHeading()
     {
-		string line = Time.time.ToString() + "," + state.progression.ToString() + ",";
+		string line = Time.time.ToString() + "," + state.GetProgress().ToString() + ",";
 		line += Vector3ToCSV(participant.transform.Find("Camera").transform.forward);
 		heading_writer.Write(line);
     }
@@ -66,7 +66,7 @@ public class Logger : MonoBehaviour
 
 	void LogPlayerPosition()
     {
-		string line = Time.time.ToString() + "," + state.progression.ToString() + ",";
+		string line = Time.time.ToString() + "," + state.GetProgress().ToString() + ",";
 		line += Vector3ToCSV(participant.transform.position);
 		position_writer.Write(line);
 

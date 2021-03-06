@@ -8,13 +8,15 @@ public class Trigger : MonoBehaviour
     public GameObject[] pathways;
     public GameObject reward;
     public GameObject participant;
-    public int groupId;
+    public State state;
+
+    private int groupId;
 
     void Start()
     {
         landmarks = GameObject.FindGameObjectsWithTag("Landmark");
         pathways = GameObject.FindGameObjectsWithTag("Pathway");
-        groupId = Random.Range(0, 2); //TODO: get from UI
+        groupId = state.group; //TODO: get from UI
     }
 
     void Update()
@@ -41,6 +43,8 @@ public class Trigger : MonoBehaviour
                 }
             }   
             Destroy(reward); // destroy reward
+
+            state.Progress(); // progress state to 'find starting' phase
     	}
     	Debug.Log(other.tag);
     	Debug.Log("okey");
