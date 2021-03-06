@@ -32,7 +32,7 @@ public class Logger : MonoBehaviour
 
 		public Writer(string log_file)
         {
-			this.stream_writer = new StreamWriter(Application.persistentDataPath + log_file);
+			this.stream_writer = new StreamWriter(Application.persistentDataPath + "_" + log_file);
         }
     }
 
@@ -44,8 +44,12 @@ public class Logger : MonoBehaviour
     // Start is called before the first frame update
     public void StartLogging()
     {
+		Debug.Log("Starting logging to: "+Application.persistentDataPath);
 		position_writer = new Writer(ComposeFileName(position_file_pre));
 		heading_writer = new Writer(ComposeFileName(heading_file_pre));
+
+		LogPlayerHeadingHeader();
+		LogPlayerPositionHeader();
 
 		InvokeRepeating("LogPlayerPosition", 0f, log_every);
 		InvokeRepeating("LogPlayerHeading", 0f, log_every);
@@ -56,17 +60,27 @@ public class Logger : MonoBehaviour
 		return vector.x.ToString() + "," + vector.y.ToString() + "," + vector.z.ToString();
     }
 
+	void LogPlayerHeadingHeader()
+    {
+		heading_writer.Write("time,progress,x,y,z");
+    }
+
+	void LogPlayerPositionHeader()
+    {
+		position_writer.Write("time,progress,x,y,z");
+    }
+
 	void LogPlayerHeading()
     {
-		string line = Time.time.ToString() + "," + state.GetProgress().ToString() + ",";
-		line += Vector3ToCSV(participant.transform.Find("Camera").transform.forward);
+		string line = state.TimeSinceStart().ToString() + "," + state.GetProgress().ToString() + ",";
+		line += Vector3ToCSV(participant.transform.Find("MainCamera").transform.forward);
 		heading_writer.Write(line);
     }
 
 
 	void LogPlayerPosition()
     {
-		string line = Time.time.ToString() + "," + state.GetProgress().ToString() + ",";
+		string line = state.TimeSinceStart().ToString() + "," + state.GetProgress().ToString() + ",";
 		line += Vector3ToCSV(participant.transform.position);
 		position_writer.Write(line);
 

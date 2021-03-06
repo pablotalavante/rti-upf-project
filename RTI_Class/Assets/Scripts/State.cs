@@ -15,21 +15,33 @@ public class State : MonoBehaviour
     public int group; // 0 or 1 based on what kind of trial this is
 
     // Experiment state
-    // 0 : starting menu
-    // 1 : searching
-    // 2 : returning
+    // 0 : searching
+    // 1 : returning
 
     private int progression;
+    private float start_time;
+
+    public GameObject done_ui;
 
     public int GetProgress()
     {
         return progression;
     }
 
+    public void StartTime()
+    {
+        start_time = Time.time;
+    }
+
+    public float TimeSinceStart()
+    {
+        return Time.time - start_time;
+    }
+
     public void Progress()
     {
         progression = 1;
-
+        done_ui.SetActive(true);
     }
 
     private void Awake()
