@@ -24,23 +24,26 @@ public class Trigger : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other){
+
         groupId = state.group; 
 
-    	if(other.tag=="Player"){
+    	if(other.tag == "Player"){
             if (groupId == 0) { // allocentric only
-                foreach (GameObject obj in pathways)
-                {
-                    Destroy(obj); // destroy walls
-                }
                 participant.transform.Rotate(0.0f, Random.Range(90.0f, 270.0f), 0.0f, Space.Self); // randomly disoriented
+
             }  else if (groupId == 1) { // egocentric only
                 foreach (GameObject obj in landmarks)
                 {
                     Destroy(obj); // destroy landmarks
                 }
             }   
-            Destroy(reward); // destroy reward
 
+            foreach (GameObject obj in pathways)
+            {
+                Destroy(obj); // destroy walls
+            }
+
+            Destroy(reward); // destroy reward
             state.Progress(); // progress state to 'find starting' phase
     	}
 
