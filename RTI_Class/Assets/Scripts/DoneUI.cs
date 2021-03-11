@@ -8,11 +8,16 @@ public class DoneUI : MonoBehaviour
     public State state;
 
     public Button done_button;
+    public Text task_text;
 
     void Start()
     {
         done_button.onClick.AddListener(EndTrialOnClick);
         gameObject.SetActive(false);
+    }
+
+    public void ShowText(){
+        Destroy(task_text, 3.0f);
     }
 
     void EndTrialOnClick()

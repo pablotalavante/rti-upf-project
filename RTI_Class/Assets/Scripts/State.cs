@@ -42,6 +42,7 @@ public class State : MonoBehaviour
     {
         progression = 1;
         done_ui.SetActive(true);
+        done_ui.GetComponent<DoneUI>().ShowText();
     }
 
     private void Awake()
