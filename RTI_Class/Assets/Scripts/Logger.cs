@@ -41,7 +41,7 @@ public class Logger : MonoBehaviour
         return file_pre + "_" + state.first_name + "_" + state.age + "_" + state.gender + "_" + state.group + ".csv";
     }
 
-    // Start is called before the first frame update
+    // start is called before the first frame update
     public void StartLogging()
     {
 		Debug.Log("Starting logging to: "+Application.persistentDataPath);
@@ -86,7 +86,7 @@ public class Logger : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    // update is called once per frame
     void Update()
     {
         

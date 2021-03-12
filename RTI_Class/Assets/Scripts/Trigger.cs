@@ -48,6 +48,6 @@ public class Trigger : MonoBehaviour
     	}
 
     	Debug.Log(other.tag);
-    	Debug.Log("Okey");
+    	Debug.Log("Ok");
     }
 }

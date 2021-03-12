@@ -1,12 +1,13 @@
 ﻿ using UnityEngine;
  using System.Collections;
  
- public class ControlFPS : MonoBehaviour
-{
+ public class ControlFPS : MonoBehaviour {
+     
     // horizontal rotation speed
     public float horizontalSpeed = 10f;
     // vertical rotation speed
     public float verticalSpeed = 10f;
+
     public float xRotation = 0.0f;
     public float yRotation = 0.0f;
     private Camera cam;
@@ -24,7 +25,8 @@
         characterController = GetComponent<CharacterController>();
     }
 
-    public void ToggleMove(){
+    public void ToggleMove()
+    {
         move = !move;
     }
 
@@ -32,6 +34,7 @@
     {   
         if (move)
         {
+            // player's head rotation
             float mouseX = Input.GetAxis("Mouse X") * horizontalSpeed;
             float mouseY = Input.GetAxis("Mouse Y") * verticalSpeed;
 
@@ -41,17 +44,16 @@
 
             cam.transform.eulerAngles = new Vector3(xRotation, yRotation, 0.0f);
 
-            // player movement - forward, backward, left, right
+            // player movements - forward, backward, left, right
             float horizontal = Input.GetAxis("Horizontal") * movementSpeed;
             float vertical = Input.GetAxis("Vertical") * movementSpeed;
             characterController.Move((cam.transform.right * horizontal + cam.transform.forward * vertical) * Time.deltaTime);
             
-            // move by clicking
+            // move to a clicked position
             if (Input.GetMouseButtonDown(0)) {
                 RaycastHit hit;
-                
                 if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hit, 100)) {
-                    characterController.Move(hit.point - characterController.transform.position);
+                    characterController.Move(hit.point - cam.transform.position);
                 }
             }
 

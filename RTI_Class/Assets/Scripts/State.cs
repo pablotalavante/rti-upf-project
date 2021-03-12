@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class State : MonoBehaviour
 {
-    // This holds global experiment state, filled in by UI
+    // this holds global experiment state, filled in by UI
 
-    // Participant info
+    // participant info
     public string first_name;
     public string age;
     public string gender; // m, f, na
 
-    // Experiment info
+    // experiment info
     public int group; // 0, 1, 2 based on what kind of trial this is
 
-    // Experiment state
+    // experiment state
     // 0 : searching
     // 1 : returning
 

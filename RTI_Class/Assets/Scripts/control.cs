@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Control : MonoBehaviour {
+	
 	public float speed;
 	public float speedR;
 	float walkSpeed;
@@ -19,7 +20,7 @@ public class Control : MonoBehaviour {
 			GetComponent<CharacterController>().Move(transform.forward * speed);
 		}
 		if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) { 
-           GetComponent<CharacterController>().Move(transform.forward* -1 * speed);
+            GetComponent<CharacterController>().Move(transform.forward* -1 * speed);
 		}
 		if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) { 
             transform.Rotate(Vector3.down* 1 * speedR);
