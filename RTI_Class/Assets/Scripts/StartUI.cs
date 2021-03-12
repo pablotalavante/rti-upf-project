@@ -14,9 +14,12 @@ public class StartUI : MonoBehaviour
     public State state;
     public Logger logger;
 
+    public GameObject participant;
+
     void Start()
     {
         start_trial_button.onClick.AddListener(StartTrialOnClick);
+
     }
     void StartTrialOnClick()
     {
@@ -29,6 +32,8 @@ public class StartUI : MonoBehaviour
         logger.StartLogging();
 
         gameObject.SetActive(false);
+
+        participant.GetComponent<ControlFPS>().ToggleMove();
     }
 
     void Update()

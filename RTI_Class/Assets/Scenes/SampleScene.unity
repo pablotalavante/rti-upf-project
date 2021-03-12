@@ -521,6 +521,7 @@ MonoBehaviour:
   group_input: {fileID: 1140970215}
   state: {fileID: 766066608}
   logger: {fileID: 569597257}
+  participant: {fileID: 1240878978}
 --- !u!114 &90003009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,8 +1128,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -31.3, y: -163}
-  m_SizeDelta: {x: 498.2, y: 40.83}
+  m_AnchoredPosition: {x: 217, y: -74}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201964902
 MonoBehaviour:
@@ -1151,7 +1152,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1162,10 +1163,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'When you start, go explore the environment, find,
+  m_Text: 'When you start, go explore the environment, find, and catch a green and
+    blue ball.
 
-    and catch a green
-    and blue ball.'
+
+    Move with WASD and rotate your head with the mouse'
 --- !u!222 &201964903
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6732,7 +6734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 258, y: -120}
+  m_AnchoredPosition: {x: 258, y: 70}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1055082340 stripped
@@ -7318,8 +7320,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalSpeed: 10
   verticalSpeed: 10
+  xRotation: 0
+  yRotation: 0
   MovementSpeed: 20
   Gravity: 9.8
+  move: 0
 --- !u!1 &1241437342
 GameObject:
   m_ObjectHideFlags: 0
@@ -8898,6 +8903,7 @@ GameObject:
   - component: {fileID: 1580767992}
   - component: {fileID: 1580767994}
   - component: {fileID: 1580767993}
+  - component: {fileID: 1580767995}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -8937,8 +8943,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8946,14 +8952,14 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 1
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Try to go back where you started.
@@ -8971,6 +8977,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580767991}
   m_CullTransparentMesh: 0
+--- !u!114 &1580767995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580767991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1609763532
 GameObject:
   m_ObjectHideFlags: 0

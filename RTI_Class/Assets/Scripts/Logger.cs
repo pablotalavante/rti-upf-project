@@ -8,7 +8,7 @@ public class Logger : MonoBehaviour
 	public string position_file_pre; // file will be named 'position_file_pre_<name>_<age>_<gender>_<group>.csv'
 	public string heading_file_pre; // file will be named 'heading_file_pre_<name>_<age>_<gender>_<group>.csv'
 
-    public float log_every; // how long to wait between logging
+    public float log_every = 0.2f; // how long to wait between logging
 
     public GameObject participant;
 	public State state;
