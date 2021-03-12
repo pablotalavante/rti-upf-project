@@ -30,12 +30,12 @@
         move = !move;
     }
 
-    public void Ditorient(){
-        float mouseX = Random.Range(-270.0f, 270.0f);
-        float mouseY = Random.Range(-270.0f, 270.0f);
+    public void Disorient(){
+        float newX = Random.Range(90.0f, 270.0f);
+        float newY = Random.Range(90.0f, 270.0f);
 
-        yRotation += mouseX;
-        xRotation -= mouseY;
+        yRotation += newX;
+        xRotation -= newY;
         xRotation = Mathf.Clamp(xRotation, -90, 90);
 
         cam.transform.eulerAngles = new Vector3(xRotation, yRotation, 0.0f);

@@ -30,7 +30,7 @@ public class Trigger : MonoBehaviour
     	if(other.tag == "Player"){
             if (groupId == 0) { // allocentric only
                 //participant.transform.Rotate(0.0f, Random.Range(90.0f, 270.0f), 0.0f, Space.Self); // randomly disoriented
-                participant.GetComponent<ControlFPS>().Ditorient();
+                participant.GetComponent<ControlFPS>().Disorient();
 
             }  else if (groupId == 1) { // egocentric only
                 foreach (GameObject obj in landmarks)
