@@ -12,8 +12,8 @@
     private Camera cam;
 
     CharacterController characterController;
-    public float MovementSpeed =2;
-    public float Gravity = 9.8f;
+    public float movementSpeed = 20f;
+    public float gravity = 9.8f;
     private float velocity = 0;
 
     public bool move = false;
@@ -22,7 +22,6 @@
     {
         cam = Camera.main;
         characterController = GetComponent<CharacterController>();
-
     }
 
     public void ToggleMove(){
@@ -31,7 +30,8 @@
 
     void Update()
     {   
-        if(move){
+        if (move)
+        {
             float mouseX = Input.GetAxis("Mouse X") * horizontalSpeed;
             float mouseY = Input.GetAxis("Mouse Y") * verticalSpeed;
 
@@ -42,18 +42,27 @@
             cam.transform.eulerAngles = new Vector3(xRotation, yRotation, 0.0f);
 
             // player movement - forward, backward, left, right
-            float horizontal = Input.GetAxis("Horizontal") * MovementSpeed;
-            float vertical = Input.GetAxis("Vertical") * MovementSpeed;
+            float horizontal = Input.GetAxis("Horizontal") * movementSpeed;
+            float vertical = Input.GetAxis("Vertical") * movementSpeed;
             characterController.Move((cam.transform.right * horizontal + cam.transform.forward * vertical) * Time.deltaTime);
             
-            // Gravity
+            // move by clicking
+            if (Input.GetMouseButtonDown(0)) {
+                RaycastHit hit;
+                
+                if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hit, 100)) {
+                    characterController.Move(hit.point - characterController.transform.position);
+                }
+            }
+
+            // gravity
             if(characterController.isGrounded)
             {
                 velocity = 0;
             }
             else
             {
-                velocity -= Gravity * Time.deltaTime;
+                velocity -= gravity * Time.deltaTime;
                 characterController.Move(new Vector3(0, velocity, 0));
             }
         }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -594,6 +594,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1859045318}
+  - {fileID: 201964901}
   - {fileID: 950042151}
   - {fileID: 1047483904}
   - {fileID: 944962473}
@@ -604,7 +605,6 @@ RectTransform:
   - {fileID: 131524919}
   - {fileID: 1612116521}
   - {fileID: 1292701493}
-  - {fileID: 201964901}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -820,7 +820,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &128888181
 MeshRenderer:
@@ -877,7 +877,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128888178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 3, z: 217.3}
+  m_LocalPosition: {x: -5, y: 5, z: 217.3}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 131524921}
   - component: {fileID: 131524920}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Text_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -913,7 +913,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 90003012}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1124,11 +1124,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 90003012}
-  m_RootOrder: 11
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 217, y: -74}
+  m_AnchoredPosition: {x: 217, y: -18}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201964902
@@ -1163,11 +1163,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'When you start, go explore the environment, find, and catch a green and
-    blue ball.
+  m_Text: 'After starting the trial, explore the environment, find a hidden green
+    and blue ball, and catch it.
 
 
-    Move with WASD and rotate your head with the mouse'
+    To move in 4 directions (forward, backward,
+    left, right), use WASD or arrow keys. To rotate your head, use the mouse or the
+    trackpad. You can also move to a position clicked by the mouse or the trackpad.'
 --- !u!222 &201964903
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1371,7 +1373,7 @@ RectTransform:
   - {fileID: 223637602}
   - {fileID: 1938316863}
   m_Father: {fileID: 90003012}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1715,7 +1717,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 90003012}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1802,7 +1804,7 @@ GameObject:
   - component: {fileID: 386260120}
   - component: {fileID: 386260119}
   m_Layer: 8
-  m_Name: Wall_2 (2)
+  m_Name: Wall_8
   m_TagString: Pathway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2000,7 +2002,7 @@ GameObject:
   - component: {fileID: 399885311}
   - component: {fileID: 399885310}
   m_Layer: 8
-  m_Name: Wall_1 (2)
+  m_Name: Wall_7
   m_TagString: Pathway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3795,7 +3797,7 @@ RectTransform:
   - {fileID: 836678586}
   - {fileID: 1882402078}
   m_Father: {fileID: 90003012}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3872,7 +3874,7 @@ GameObject:
   - component: {fileID: 626864649}
   - component: {fileID: 626864648}
   m_Layer: 8
-  m_Name: Wall_2 (4)
+  m_Name: Wall_10
   m_TagString: Pathway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4918,7 +4920,7 @@ GameObject:
   - component: {fileID: 811587437}
   - component: {fileID: 811587436}
   m_Layer: 8
-  m_Name: Wall_1 (3)
+  m_Name: Wall_11
   m_TagString: Pathway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5515,7 +5517,7 @@ GameObject:
   - component: {fileID: 860656818}
   - component: {fileID: 860656817}
   m_Layer: 8
-  m_Name: Wall_1 (1)
+  m_Name: Wall_4
   m_TagString: Pathway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5878,7 +5880,7 @@ RectTransform:
   - {fileID: 595715725}
   - {fileID: 1329793923}
   m_Father: {fileID: 90003012}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5952,7 +5954,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 90003012}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6441,7 +6443,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.2, y: 74}
+  m_AnchoredPosition: {x: 0.2, y: 139}
   m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1019066374
@@ -6730,11 +6732,11 @@ RectTransform:
   m_Children:
   - {fileID: 1512038811}
   m_Father: {fileID: 90003012}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 258, y: 70}
+  m_AnchoredPosition: {x: 229, y: -102}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1055082340 stripped
@@ -6877,90 +6879,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1071470049}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1105998655
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1105998658}
-  - component: {fileID: 1105998657}
-  - component: {fileID: 1105998656}
-  m_Layer: 5
-  m_Name: Instructions
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1105998656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105998655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Try to go back where you started.
-
-
-    When you think you are done,
-
-    press
-    the button.'
---- !u!222 &1105998657
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105998655}
-  m_CullTransparentMesh: 0
---- !u!224 &1105998658
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105998655}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 172.75, y: 98}
-  m_SizeDelta: {x: 300, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1108675723 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3386553121241536846, guid: 3fbd24130113a458b975c5ab22d65769,
@@ -7098,7 +7016,7 @@ RectTransform:
   - {fileID: 634346616}
   - {fileID: 1385877125}
   m_Father: {fileID: 90003012}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7304,7 +7222,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1240878980
 MonoBehaviour:
@@ -7322,8 +7240,8 @@ MonoBehaviour:
   verticalSpeed: 10
   xRotation: 0
   yRotation: 0
-  MovementSpeed: 20
-  Gravity: 9.8
+  movementSpeed: 20
+  gravity: 9.8
   move: 0
 --- !u!1 &1241437342
 GameObject:
@@ -7569,7 +7487,7 @@ GameObject:
   - component: {fileID: 1292701495}
   - component: {fileID: 1292701494}
   m_Layer: 5
-  m_Name: Text (3)
+  m_Name: Text_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7587,7 +7505,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 90003012}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7887,7 +7805,7 @@ GameObject:
   - component: {fileID: 1318128827}
   - component: {fileID: 1318128826}
   m_Layer: 8
-  m_Name: Wall_2 (1)
+  m_Name: Wall_5
   m_TagString: Pathway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8927,8 +8845,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 80}
+  m_AnchoredPosition: {x: 1, y: 67}
+  m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1580767993
 MonoBehaviour:
@@ -8943,7 +8861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8954,21 +8872,16 @@ MonoBehaviour:
     m_FontSize: 14
     m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 14
     m_Alignment: 1
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Try to go back where you started.
-
-
-    When you think you are done,
-
-    press
-    the button.'
+  m_Text: "Now return to where you started. \nWhen you think you are done, press
+    the above button."
 --- !u!222 &1580767994
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8989,7 +8902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!1 &1609763532
@@ -9117,7 +9030,7 @@ GameObject:
   - component: {fileID: 1612116523}
   - component: {fileID: 1612116522}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: Text_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9135,7 +9048,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 90003012}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9528,7 +9441,7 @@ GameObject:
   - component: {fileID: 1714356989}
   - component: {fileID: 1714356988}
   m_Layer: 8
-  m_Name: Wall_1 (4)
+  m_Name: Wall_12
   m_TagString: Pathway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10009,7 +9922,7 @@ GameObject:
   - component: {fileID: 1862127930}
   - component: {fileID: 1862127929}
   m_Layer: 8
-  m_Name: Wall_3 (1)
+  m_Name: Wall_6
   m_TagString: Pathway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10465,7 +10378,7 @@ GameObject:
   - component: {fileID: 1924171354}
   - component: {fileID: 1924171353}
   m_Layer: 8
-  m_Name: Wall_1 (5)
+  m_Name: Wall_13
   m_TagString: Pathway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10809,7 +10722,7 @@ GameObject:
   - component: {fileID: 1994339422}
   - component: {fileID: 1994339421}
   m_Layer: 8
-  m_Name: Wall_2 (3)
+  m_Name: Wall_9
   m_TagString: Pathway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11179,7 +11092,7 @@ GameObject:
   - component: {fileID: 2100371753}
   - component: {fileID: 2100371752}
   m_Layer: 8
-  m_Name: Wall_1 (6)
+  m_Name: Wall_14
   m_TagString: Pathway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11434,7 +11347,7 @@ PrefabInstance:
     - target: {fileID: 4127559476560736625, guid: 69d5e51c57701493a80b817f6a473e52,
         type: 3}
       propertyPath: m_Radius
-      value: 0.8
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4127559476560736625, guid: 69d5e51c57701493a80b817f6a473e52,
         type: 3}

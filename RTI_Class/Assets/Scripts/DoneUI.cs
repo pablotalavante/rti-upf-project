@@ -17,7 +17,7 @@ public class DoneUI : MonoBehaviour
     }
 
     public void ShowText(){
-        Destroy(task_text, 3.0f);
+        Destroy(task_text, 5.0f);
     }
 
     void EndTrialOnClick()
