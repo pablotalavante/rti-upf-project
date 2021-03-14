@@ -32,17 +32,18 @@ public class Trigger : MonoBehaviour
                 //participant.transform.Rotate(0.0f, Random.Range(90.0f, 270.0f), 0.0f, Space.Self); // randomly disoriented
                 participant.GetComponent<ControlFPS>().Disorient();
 
+                foreach (GameObject obj in pathways){
+                    Destroy(obj); // destroy walls
+                }
+
             }  else if (groupId == 1) { // egocentric only
-                foreach (GameObject obj in landmarks)
-                {
+                foreach (GameObject obj in landmarks) {
                     Destroy(obj); // destroy landmarks
                 }
+                foreach (GameObject obj in pathways){
+                    Destroy(obj); // destroy walls
+                }
             }   
-
-            foreach (GameObject obj in pathways)
-            {
-                Destroy(obj); // destroy walls
-            }
 
             Destroy(reward); // destroy reward
             state.Progress(); // progress state to 'find starting' phase
