@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Trigger : MonoBehaviour
-{	
-	public GameObject[] landmarks;
+{   
+    public GameObject[] landmarks;
     public GameObject[] pathways;
     public GameObject reward;
     public GameObject participant;
@@ -27,12 +27,8 @@ public class Trigger : MonoBehaviour
 
         groupId = state.group; 
 
-    	if(other.tag == "Player"){
+        if(other.tag == "Player"){
             if (groupId == 0) { // allocentric only
-                foreach (GameObject obj in pathways)
-                {
-                    Destroy(obj); // destroy walls
-                }
                 //participant.transform.Rotate(0.0f, Random.Range(90.0f, 270.0f), 0.0f, Space.Self); // randomly disoriented
                 participant.GetComponent<ControlFPS>().Disorient();
 
@@ -44,21 +40,17 @@ public class Trigger : MonoBehaviour
                 foreach (GameObject obj in landmarks) {
                     Destroy(obj); // destroy landmarks
                 }
-<<<<<<< HEAD
                 foreach (GameObject obj in pathways){
-=======
-                foreach (GameObject obj in pathways)
-                {
->>>>>>> 3a660bd695ac7fde77cd8303dbb14148275b96e7
                     Destroy(obj); // destroy walls
                 }
             }   
 
             Destroy(reward); // destroy reward
             state.Progress(); // progress state to 'find starting' phase
-    	}
+        }
 
-    	Debug.Log(other.tag);
-    	Debug.Log("Ok");
+        Debug.Log(other.tag);
+        Debug.Log("Ok");
     }
 }
+
