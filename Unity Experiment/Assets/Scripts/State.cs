@@ -31,6 +31,7 @@ public class State : MonoBehaviour
     public void StartTime()
     {
         start_time = Time.time;
+        Cursor.visible = false;
     }
 
     public float TimeSinceStart()
