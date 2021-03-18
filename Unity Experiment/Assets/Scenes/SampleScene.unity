@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -520,7 +520,7 @@ MonoBehaviour:
   gender_input: {fileID: 607847847}
   group_input: {fileID: 1140970215}
   state: {fileID: 766066608}
-  logger: {fileID: 569597257}
+  logger: {fileID: 0}
   participant: {fileID: 1240878978}
 --- !u!114 &90003009
 MonoBehaviour:
@@ -3472,7 +3472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position_file_pre: positions
   heading_file_pre: headings
-  log_every: 1
+  log_every: 0.2
   participant: {fileID: 1240878978}
   state: {fileID: 766066608}
 --- !u!4 &569597258
