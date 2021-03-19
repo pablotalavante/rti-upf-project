@@ -18,6 +18,8 @@
     private float velocity = 0;
 
     public bool move = false;
+    public State state;
+    private bool disorientated = false;
 
     void Start()
     {
@@ -77,6 +79,11 @@
             {
                 velocity -= gravity * Time.deltaTime;
                 characterController.Move(new Vector3(0, velocity, 0));
+            }
+
+            if (state.group == 0 && state.GetProgress() == 1 && disorientated == false) {
+                Invoke( "Disorient", 10);
+                disorientated = true;
             }
         }
     }

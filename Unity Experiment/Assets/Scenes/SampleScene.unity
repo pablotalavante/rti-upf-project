@@ -7243,6 +7243,7 @@ MonoBehaviour:
   movementSpeed: 20
   gravity: 9.8
   move: 0
+  state: {fileID: 766066608}
 --- !u!1 &1241437342
 GameObject:
   m_ObjectHideFlags: 0
